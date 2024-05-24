@@ -261,5 +261,6 @@ compile_commands.json
 # add by Tht
 openssl_3.3
 build/
+build_vscode/
 .vscode/
 demos/**/*.txt
