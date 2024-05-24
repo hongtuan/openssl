@@ -14,3 +14,7 @@ end_time=$(date +%s)
 # 计算编译耗时
 build_duration=$((end_time - start_time))
 echo "OpenSSL库编译耗时: $build_duration seconds"
+if [ $build_duration -gt 60 ]; then
+    build_duration_minutes=$(echo "scale=2; $build_duration/60" | bc)
+    echo "OpenSSL编译耗时: $build_duration_minutes 分钟"
+fi
