@@ -20,11 +20,11 @@
 #else /* Linux/Unix */
 # include <sys/socket.h>
 #endif
-
+#define SSL_STREAM_STATE_RESET_REMOTE   5
+#define SSL_STREAM_STATE_CONN_CLOSED    6
 #include <openssl/bio.h>
 #include <openssl/ssl.h>
 #include <openssl/err.h>
-
 /* Helper function to create a BIO connected to the server */
 static BIO *create_socket_bio(const char *hostname, const char *port,
                               int family, BIO_ADDR **peer_addr)

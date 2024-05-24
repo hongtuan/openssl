@@ -82,7 +82,8 @@ int main(int argc, char **argv)
     }
     PKCS7_free(p7);
     X509_free(rcert);
-    OSSL_STACK_OF_X509_free(recips);
+    // OSSL_STACK_OF_X509_free(recips);
+    sk_X509_free(recips);
     BIO_free(in);
     BIO_free(out);
     BIO_free(tbio);

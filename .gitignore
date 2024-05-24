@@ -257,3 +257,9 @@ doc-nits
 # LSP (Language Server Protocol) support
 .cache/
 compile_commands.json
+
+# add by Tht
+openssl_3.3
+build/
+.vscode/
+demos/**/*.txt
